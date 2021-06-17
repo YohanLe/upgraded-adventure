@@ -1,0 +1,120 @@
+
+/*=========================================================*/
+	/*==This is a body css style for for all pages of html===*/
+/*=========================================================*/
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 13pt;
+    margin: 3em;
+
+}
+
+/*=============================================================================*/
+	/*==This is a body css style for h1,h2 and h3 for all pages of html===*/
+/*=============================================================================*/
+h1{
+	color: #8A2BE2;
+	font-size: 22pt;
+	text-align: center;
+}
+
+h2{
+	color: #8B0000;
+	font-size: 18pt;
+}
+
+h3{
+	color: #006400;
+	font-size: 16pt;
+}
+#two {
+	text-align: center;
+}
+
+/*=============================================================================*/
+	/*==This is a table css style used inindex2.html ===*/
+/*=============================================================================*/
+
+#ethinic_groups {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+
+}
+#ethinic_groups td,#ethinic_groups tr {
+  border: 2px solid #87CEEB;
+  padding: 8px;
+  background-color: #00FA9A;
+  color: #FA8072;
+}
+#ethinic_groups td:hover {background-color: black;}
+
+
+
+/*=============================================================================*/
+	/*==This is a menu/Navigation css style used in each html page ===*/
+/*=============================================================================*/
+
+#Menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+#Menu li {
+  float: left;
+}
+
+#Menu li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#Menu li a:hover {
+  background-color: #111;
+}
+
+
+/*=============================================================================*/
+	/*==This is a list css style used in each html page ===*/
+/*=============================================================================*/
+
+ul{
+	text-align: inherit;
+}
+
+ul {
+  
+  padding: 30px;
+
+}
+
+
+/*=========================================================*/
+	/*==Footer code to display in computer and print===*/
+/*=========================================================*/
+#footer {
+ clear: both;
+ background: yellow;
+ width:100%
+}
+#footer p {
+ margin:0;
+ padding:5px 0px;
+ text-align: center;
+ font-size: 14px;
+}
+
+
+/*==============================================================================*/
+	/*==Print notice code to display/undisplay in computer and print===*/
+/*===============================================================================*/
+#printnotice {
+ display: none;
+}
+
