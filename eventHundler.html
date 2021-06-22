@@ -1,0 +1,50 @@
+<!-- this is a comment -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>AJAX</title>
+    <link rel="stylesheet" type="text/css" href="printstyle.css">
+</head>
+<body>
+  <button id="col-1">A button to trigger AJAX</button>
+  <script>
+    
+    (function() {
+      var httpRequest;
+      document.getElementById("col-1").onclick = function() { makeRequest('fam.html');
+    };
+
+    // To create new XML request 
+    function makeRequest(url) {
+      httpRequest = new XMLHttpRequest();
+      if (!httpRequest) {
+        alert('cant create XMLHTTP instances');
+        return false;
+      }
+      // hundle the server response , call alert contents 
+      httpRequest.onreadystatechange = alertContents;
+      httpRequest.open('GET', url);
+      httpRequest.send();
+      //check the state of the response if it is done we know it is recived a response.
+
+    function alertContents(){
+      if (httpRequest.readyState === XMLHttpRequest.DONE) {
+
+        if(httpRequest.status === 200){
+          alert(httpRequest.responseText);
+        }else{
+          alert('There is a problem with the request');
+        }
+      }
+    }
+    }
+
+   </script>
+
+</body>
+
+
+</html>
+
+ 

@@ -1,0 +1,24 @@
+{
+"school record":[
+  {
+  	"under grad" : {
+	  "School":"MTU",
+	  "Program":"Computer science",
+	  "Type":"BS",
+	  "Year conferred":2010
+	}
+  },
+  
+  {
+  	"Masters": {
+	  "School":"BU",
+	  "Program":"Computer science",
+	  "Type":"MS",
+	  "Year conferred":2022
+	}
+  }
+]
+
+}
+
+

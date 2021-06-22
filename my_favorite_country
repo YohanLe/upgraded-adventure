@@ -1,0 +1,15 @@
+
+<?xml version="1.0">
+<my_favorite_country>
+	<country>
+		<country_name> USA </country_name>
+		<city_name> Los Angeles </city_name>
+		<contenent> North America </contenent>
+	</country>
+
+	<country>
+		<country_name> Ethiopia </country_name>
+		<city_name> Addis Ababa </city_name>
+		<contenent> Africa </contenent>
+	</country>
+</my_favorite_country>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Childhood</title>
+    <link rel="stylesheet" type="text/css" href="screenstyle.css">
+    <link rel="stylesheet" type="text/css" href="printstyle.css">  
+    <script src="formvalidationjs.js"></script>
+</head>
+<body>
+    
+  <div class="container">
+
+    <h2>Biography - Form</h2>
+
+    <form id = "myform" onsubmit="return validat_form()" name="myform" action="https://bucs601.com/submit.php"  method="post">
+
+      <div class="row">
+        <div class="col-1">
+          <label for="firstName">First Name</label>
+        </div>
+        <div class="col-2">
+          <input type="text" id="firstName" name="firstName" placeholder="Your first name.." required onkeypress="return event.charCode === 0 || /\d/.test(String.fromCharCode(event.charCode));" >
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1">
+          <label for="lastName">Last Name</label>
+        </div>
+        <div class="col-2">
+          <input type="text" id="lastName" name="lastName" placeholder="Your last name.." required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1">
+          <label for="facilitator">Facilitator Name</label>
+        </div>
+        <div class="col-2">
+          <input type="text" id="facilitator" name="facilitator" placeholder="Your Facilitator name.." required>
+        </div>
+      </div>
+    
+      <h2>City lists - Checkbox</h2>
+      <p>In which City do find a varity of delicious food selections?</p>
+       <p>
+           <input type="checkbox" name="city1" value="Los Angeles"> Los Angeles <br/>
+           <input type="checkbox" name="city2" value="Des Moines"> Des Moines <br/>
+           <input type="checkbox" name="city3" value="Addis Ababa"> Addis Ababa <br/>
+           <input type="checkbox" name="city4" value="San Jose"> San Jose <br/>
+           <input type="checkbox" name="city5" value="Valley"> Valley <br/>
+           <input type="checkbox" name="city6" value="San Fransisco"> San Fransisco<br/>
+       </p>
+       <h2>Food lists - Radio</h2>
+       <p><b> What is your Favoriate Food?</b></p>
+       <p>
+           <input type="radio" name="food" value="Steak"> Steak <br/>
+           <input type="radio" name="food" value="Doro Wot"> Doro Wot - Ethiopian traditional chicken spicy food <br/>
+           <input type="radio" name="food" value="Burger"> Burger <br/>
+       </p>
+
+      <div class="row">
+        <div class="col-1">
+          <input type="reset" value="Reset">
+          <input type="submit" value="Submit">
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+
+</body>
+</html>

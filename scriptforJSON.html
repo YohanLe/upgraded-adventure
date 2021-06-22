@@ -1,0 +1,51 @@
+<!-- this is a comment -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSON</title>
+    <link rel="stylesheet" type="text/css" href="printstyle.css">
+</head>
+<body>
+  <div id="col-2">
+    <button id="col-1">click on me to retrive data from JSON</button>
+    <script>
+      
+      (function() {
+        var httpRequest;
+        document.getElementById("col-1").onclick = function() { makeRequest('schoolrecordjson.json');
+      };
+
+      // To create new XMLHttpRequest object
+      function makeRequest(url) {
+        httpRequest = new XMLHttpRequest();
+        if (!httpRequest) {
+          alert('cant create XMLHTTP instances');
+          return false;
+        }
+        // hundle the server response , call alert contents 
+        httpRequest.onreadystatechange = alertContents;
+        httpRequest.open('GET', url);
+        httpRequest.send();
+        //check the state of the response if it is done we know it is recived a response.
+
+      function alertContents(){
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
+
+          if(httpRequest.status === 200){
+            alert(httpRequest.responseText);
+          }else{
+            alert('There is a problem with the request');
+          }
+        }
+      }
+      }
+
+     </script>
+   </div>
+
+</body>
+
+</html>
+
+ 

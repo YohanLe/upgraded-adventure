@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sample Vue Application</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="screenstyle.css">
+        <link rel="stylesheet" type="text/css" href="printstyle.css" media="print">     
+    </head>
+    <body>
+        <h2> Menu/Navigation</h2>
+        <nav id="Menu">
+            <ul>
+                <li> <a href="index.html" target="_blank">Home page</a> </li>
+                <li><a href="Childhood3.html" target="_blank">Childhood</a></li>
+                <li><a href="Adulthood3.html" target="_blank">Adulthood</a></li>
+                <li><a href="formHtml.html" target="_blank"> Registration Form</a></li>
+                <li><a href="Vuehtml.html" target="_blank"> Comparing Images in Vue Java script</a></li>
+            </ul>
+        </nav>
+        
+        <div id="app">
+            <h1>This page demonstrates Vue framework</h1>
+            <h2>{{title}}</h2>
+            <img :src="first_image" @mouseover="first_image = secound_image"/ alt="State of Iowa Images" width="400" height="320"><br>
+            <h2>{{para}}</h2>
+            <img :src="coffee_prepration" @mouseover="coffee_prepration = drinking_coffee"/ alt="State of Iowa Images" width="400" height="320">
+
+            </br>
+
+            <h3>My activity if I am outside and the weather is hot or not</h3>
+            
+            <ul>
+                <li v-if="hot && outside">
+                      hot and outside</li>
+                <li v-else-if="hot">Since I am inside and its hot - the Ac is on</li>
+                <li v-else>Sleeping></li>
+            </ul>
+            
+            <h3>The Language that I can speak</h3>
+            <ul>
+                <li v-for="Languages in Languages">{{Languages}}</li>
+            </ul>
+        </div>
+        
+        <!--Include Vue-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.min.js"></script>
+
+
+        <!--Create Vue instance-->
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    title:'River from Ethiopia to -----> Snow in state of Iowa',
+                    para: 'Coffee preparation to -----> consumption',
+                    first_image: "https://addisfortune.net/wp-content/uploads/2018/08/river_extending_Afincho_Ber_Sheraton_Addis_adf.jpg",
+                    secound_image: "https://wanderlustnation.files.wordpress.com/2015/02/180636_10150134247257619_3244630_n.jpg?w=620",
+                    coffee_prepration: "http://www.worldhum.com/images/images2010/coffee_ceremony_360.jpg",
+                    drinking_coffee: "https://amanethiopiatours.com/blog/wp-content/uploads/2019/06/Evanca-Trup.jpg",
+                    hot: true,
+                    outside: false,
+                    Languages: [
+                        'Amharic',
+                        'English',
+                        'Oromifa',
+                        'Tigrigna'
+                    ]
+                }
+            })
+
+
+         </script>
+
+         
+
+
+    </body>
+</html>
